@@ -11,6 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv('SECRET_KEY')
+# SECRET_KEY = 'django-insecure-$l^+xh1^ldue^xh%1wt#5&e0s#(pjn3%h5p8a7i_1zp#i#x-@-'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -30,6 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #extensions
     'django_extensions',
+    'import_export',
     #apps
     'student',
     'library',
@@ -79,6 +81,12 @@ DATABASES = {
         "PORT": os.getenv('DATABASE_PORT'),
     }
 }
+# DATABASE_ENGINE = "django.db.backends.postgresql"
+# DATABASE_NAME = "projectdjango"
+# DATABASE_USER= "postgres"
+# DATABASE_PASSWORD = "abdu200400"
+# DATABASE_HOST = "127.0.0.1"
+# DATABASE_PORT = "5432"
 
 
 # Password validation
