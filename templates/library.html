@@ -72,5 +72,23 @@
             </tbody>
         </table>
     </div>
+    <h1>Library page</h1>
+    <form>
+        {% csrf_token%}
+       <input type="text" value="{{search}}" name="search" placeholder="Search">
+        <button type="submit">Search</button>
+    </form> <br>
+    
+    
+    
+    <h1>Books:</h1>
+    {%  for book in books %}
+        <li>
+            <h2>
+            <a href="{% url 'book-detail' book.id %}">Title: {{ book.title }}</a>
+            </h2>
+        </li>
+    {%  endfor %}
+    <a href="{% url 'landing' %}">Back</a>
 </body>
 </html>

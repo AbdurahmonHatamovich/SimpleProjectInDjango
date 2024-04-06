@@ -8,7 +8,7 @@ class Author(models.Model):
     birth_date = models.DateField(auto_now_add=True, verbose_name="Birth Date")
 
     def __str__(self):
-        return f"{self.first_name}  {self.last_name}"
+        return f"{self.id} {self.first_name}  {self.last_name}"
 
 class Comments(models.Model):
     text = models.TextField(verbose_name="Comments")

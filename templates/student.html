@@ -66,5 +66,14 @@
             </tbody>
         </table>
     </div>
+   <h1>Students:</h1>
+    {%  for student in students %}
+        <li>
+            <h2>
+            <a href="">{{ student.first_name }} {{ student.last_name}}</a>
+            </h2>
+        </li>
+    {%  endfor %}
+    <a href="{% url 'landing' %}">Back</a>
 </body>
 </html>
