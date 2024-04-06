@@ -66,6 +66,15 @@
             </tbody>
         </table>
     </div>
+     <h1>Student page</h1>
+    <form>
+        {% csrf_token%}
+       <input type="text" value="{{search}}" name="search" placeholder="Search">
+        <button type="submit">Search</button>
+    </form> <br>
+
+
+
    <h1>Students:</h1>
     {%  for student in students %}
         <li>
