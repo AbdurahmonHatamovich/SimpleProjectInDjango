@@ -66,23 +66,22 @@
             </tbody>
         </table>
     </div>
-     <h1>Student page</h1>
-    <form>
-        {% csrf_token%}
-       <input type="text" value="{{search}}" name="search" placeholder="Search">
+    <h1>Student page</h1>
+    <form method="GET">
+        {% csrf_token %}
+        <input type="text" value="{{ search }}" name="search" placeholder="Search">
         <button type="submit">Search</button>
     </form> <br>
-
-
-
-   <h1>Students:</h1>
-    {%  for student in students %}
-        <li>
-            <h2>
-            <a href="">{{ student.first_name }} {{ student.last_name}}</a>
-            </h2>
-        </li>
-    {%  endfor %}
+    <h1>Students:</h1>
+    <ul>
+        {% for student in students %}
+            <li>
+                <h2>
+                    <a href="{% url 'student-detail' student.id %}">{{ student.first_name }} {{ student.last_name }}</a>
+                </h2>
+            </li>
+        {% endfor %}
+    </ul>
     <a href="{% url 'landing' %}">Back</a>
 </body>
 </html>

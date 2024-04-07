@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Detail</title>
+</head>
+<body>
+    <h1>Student Detail</h1>
+    <h2>Firstname: {{ student.first_name }}</h2>
+    <h3>Lastname: {{ student.last_name }}</h3>
+    <h4>Age: {{ student.age }}</h4>
+    <h5>Address: {{ student.address }}</h5>
+
+    <a href="{% url 'landing' %}">Back</a>
+</body>
+</html>
