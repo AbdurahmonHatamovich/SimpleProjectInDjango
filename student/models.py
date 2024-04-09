@@ -8,6 +8,7 @@ class Adress(models.Model):
 
 
 class Students(models.Model):
+    image = models.ImageField(upload_to='media/students/')
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     age = models.PositiveIntegerField(default=18)

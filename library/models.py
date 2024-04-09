@@ -23,6 +23,7 @@ class Book(models.Model):
     price = models.FloatField(verbose_name="Cost")
     comments = models.ManyToManyField(Comments,verbose_name="UsersComments")
     count = models.IntegerField(default=1)
+    image = models.ImageField(upload_to="media/book/")
     authors = models.ForeignKey(Author, on_delete=models.CASCADE)
     create_date = models.DateTimeField(auto_created=True)
 

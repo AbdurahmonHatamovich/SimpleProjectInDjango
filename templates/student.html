@@ -75,6 +75,7 @@
     <h1>Students:</h1>
     <ul>
         {% for student in students %}
+        <td><img src="{{ student.image.url }}" alt="{{ student.first_name }} {{ student.last_name }}" class="student-image"></td>
             <li>
                 <h2>
                     <a href="{% url 'student-detail' student.id %}">{{ student.first_name }} {{ student.last_name }}</a>

@@ -6,15 +6,16 @@
 </head>
 <body>
 
-    <h1>Book Detail</h1>
-    <h2>Title: {{ book.title }}</h2>
-    <h3>Description: </h3>
-    <p>
+    <b>Book Detail</b>
+    <h3>Title: {{ book.title }}</h3>
+    <b>Description: </b>
+    <h3>
         {{book.description}}
-    </p>
-    Price: {{book.price}} <br>
+    </h3>
+    <b>Price :</b> {{book.price}} <br>
+    <b>Comments:</b> {{book.comments}}
     Count: {{book.count}} <br>
-    Author: {{book.author.first_name}} <br>
+    Author: {{book.authors.first_name}} <br>
 
     <a href="{% url 'library' %}">Back</a>
 
