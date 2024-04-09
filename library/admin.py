@@ -24,13 +24,13 @@ class BookAdmin(ImportExportModelAdmin):
 
 @admin.register(BookingBook)
 class BookingAdmin(ImportExportModelAdmin):
-    list_display = ("id", "student", "book", "take_date", "return_date")
+    list_display = ("id","take_date", "return_date")
 
-    def student(self):
-        return self.count()
-
-    def book(self):
-        return self.count()
+    # def student(self):
+    #     return self.count()
+    #
+    # def book(self):
+    #     return self.count()
 
 
 @admin.register(Comments)

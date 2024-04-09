@@ -18,6 +18,8 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = []
+LOGIN_URL = "login"
+
 
 
 # Application definition
@@ -35,6 +37,8 @@ INSTALLED_APPS = [
     #apps
     'student',
     'library',
+    'users',
+
 ]
 
 MIDDLEWARE = [
@@ -123,3 +127,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]

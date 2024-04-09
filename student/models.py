@@ -6,10 +6,7 @@ class Adress(models.Model):
     def __str__(self):
         return self.name
 
-class Role(models.TextChoices):
-    b = ("B", "Business")
-    m = ("M", "Manager")
-    p = ("P", "Professional")
+
 class Students(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)

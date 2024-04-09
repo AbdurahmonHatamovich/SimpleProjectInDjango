@@ -2,19 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Title</title>
 </head>
 <body>
+
     <h1>Book Detail</h1>
-    <h2>Title:{{book.title}}</h2>
-    <h3>Description : </h3>
+    <h2>Title: {{ book.title }}</h2>
+    <h3>Description: </h3>
     <p>
         {{book.description}}
     </p>
-    Price : {{book.price}} <br>
+    Price: {{book.price}} <br>
     Count: {{book.count}} <br>
-    Author : {{book.authors}} <br>
+    Author: {{book.author.first_name}} <br>
 
     <a href="{% url 'library' %}">Back</a>
+
 </body>
 </html>
